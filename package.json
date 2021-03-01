@@ -28,7 +28,7 @@
     "postinstall": "husky install && ./scripts/postinstall.sh",
     "clean-build": "./scripts/clean-build.sh",
     "clean": "./scripts/clean.sh",
-    "build": "./scripts/build.sh",
+    "build": "export NODE_OPTIONS=\"--max-old-space-size=8192\" && ./scripts/build.sh",
     "vercel-build": "yarn build && yarn hash && mv dist public",
     "hash": "./scripts/hash.sh",
     "package": "./scripts/package.sh",
